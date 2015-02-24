@@ -7,8 +7,7 @@ using System.Data;
 
 namespace WSGSB
 {
-    class MySqlGsb
-    {
+    
         class MySqlGsb
         {
             //parametre de connexion
@@ -156,6 +155,5 @@ namespace WSGSB
                 DataRow ligne = table.Rows[row];
                 return ligne[col];
             }
-        }
-    }
+        }   
 }
