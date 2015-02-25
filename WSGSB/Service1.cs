@@ -53,10 +53,12 @@ namespace WSGSB
         }
         protected override void OnStart(string[] args)
         {
+            this.OnTimer(null, null);//on declenche de suite l'evenement
             System.Timers.Timer timer = new System.Timers.Timer();
-            timer.Interval = 30000;
+            timer.Interval = 60000 * 60 * 24;//puis tout les 24 heures
             timer.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);
             timer.Start();
+          
         }
         protected override void OnStop()
         {
